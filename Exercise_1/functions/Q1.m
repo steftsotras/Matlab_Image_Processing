@@ -19,9 +19,9 @@ fprintf('Range of Merilin image : [%d,%d]\n',ranges(1,5),ranges(1,6));
 
 %Lineary Transforming each image to fit [0,255] range
 %Saving each newly transformed image to a new variable
-n_fl = (255/(ranges(1,2) - ranges(1,1))) * (x_fl - ranges(1,1));
-n_cl = (255/(ranges(1,4) - ranges(1,3))) * (x_cl - ranges(1,3));
-n_Mer = (255/(ranges(1,6) - ranges(1,5))) * (Mer - ranges(1,5));
+n_fl = linear_transformation(x_fl, 0, 255);
+n_cl = linear_transformation(x_cl, 0, 255);
+n_Mer = linear_transformation(Mer, 0, 255);
 
 %Ploting images from before and after the transformation
 subplot(3,2,1),imshow(x_fl,[0 255]),title('Flowers before'), subplot(3,2,2), imshow(n_fl,[0 225]), title('Flowers after'),subplot(3,2,3), imshow(x_cl,[0 255]), title('Clock before'), subplot(3,2,4), imshow(n_cl,[0 225]),title('Clock after'), subplot(3,2,5), imshow(Mer,[0 255]), title('Merilin before'), subplot(3,2,6), imshow(n_Mer,[0 225]),title('Merilin after');
