@@ -1,5 +1,7 @@
 function n_im = histogram_equalisation(im)
 
+im = uint8(im);
+
 %defining variables
 rows = size(im,1);
 columns = size(im,2);
@@ -34,7 +36,7 @@ end
 %rounded cdf for every pixels density 
 for i=1:rows
     for j=1:columns
-        n_im(i,j) = r_cdf(im(i,j) + 1);
+        n_im(i,j) = r_cdf(im(i,j)+1);
     end
 end
 
