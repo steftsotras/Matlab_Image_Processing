@@ -11,6 +11,7 @@ l_fl = laplacian_filter(y_fl);
 n_cl = y_cl - l_cl;
 n_fl = y_fl - l_fl;
 
+%Scale images to fit the original images scale
 n_cl = imScale(n_cl,min(min(y_cl)), max(max(y_cl)));
 n_fl = imScale(n_fl,min(min(y_fl)), max(max(y_fl)));
 
