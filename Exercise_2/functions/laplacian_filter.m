@@ -1,6 +1,6 @@
 function LI = laplacian_filter(I)
 
-%laplacian mask negative
+%laplacian mask alternative
 %LM2 = [-1 -1 -1;-1 8 -1;-1 -1 -1];
 
 %laplacian mask
