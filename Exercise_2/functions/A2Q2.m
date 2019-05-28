@@ -9,8 +9,8 @@ n_cl = y_cl - l_cl;
 n_fl = y_fl - l_fl;
 
 %Scale images to fit the original images scale
-n_cl = imScale(n_cl,min(min(y_cl)), max(max(y_cl)));
-n_fl = imScale(n_fl,min(min(y_fl)), max(max(y_fl)));
+n_cl = linear_transformation(n_cl,min(min(y_cl)), max(max(y_cl)));
+n_fl = linear_transformation(n_fl,min(min(y_fl)), max(max(y_fl)));
 
 %show images
 subplot(2,2,1),imshow(y_cl,[0 255]),title('Original'),subplot(2,2,2),imshow(n_cl,[0 255]),title('After laplacian filter');

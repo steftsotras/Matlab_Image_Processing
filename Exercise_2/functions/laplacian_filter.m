@@ -10,6 +10,6 @@ LM = [0 1 0;1 -4 1;0 1 0];
 LI = conv2(I,LM,'same');
 
 %scale image to original values
-LI = imScale(LI,min(min(I)), max(max(I)));
+LI = linear_transformation(LI,min(min(I)), max(max(I)));
 
 end
