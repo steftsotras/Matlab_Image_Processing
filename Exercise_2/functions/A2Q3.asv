@@ -5,6 +5,16 @@ sal_pan = salNpep(pan);
 sal_le  = salNpep(x_le);
 
 %apply mean filter
+mean_pan = meanf(sp_pan);
+mean_le = meanf(sp_le);
 
+med_pan = medianf(sp_pan);
+med_le = medianf(sp_le);
+
+figure(1);
+sunplot(2,2,1),imshow(pan,[0 255]),title('Original');
+sunplot(2,2,2),imshow(sal_pan,[0 255]),title('Original');
+sunplot(2,2,3),imshow(pan,[0 255]),title('Original');
+sunplot(2,2,4),imshow(pan,[0 255]),title('Original');
 
 end

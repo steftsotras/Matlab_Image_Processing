@@ -1,4 +1,4 @@
-function medianf(Im)
+function med_Im = medianf(Im)
 
 %getting size of image and defining the output matrix
 [m,n] = size(Im);
@@ -17,13 +17,11 @@ for i=1:m
         %neighborhood matrix
         temp = Im(rmin:rmax,cmin:cmax);
         
-        %average of neighborhood will be the new value of Im(i,j)
+        %median of neighborhood will be the new value of Im(i,j)
         med_Im(i,j) = median(temp(:));
         
     end
 end
 
-
-imshow(med_Im,[0 255]);
 
 end
