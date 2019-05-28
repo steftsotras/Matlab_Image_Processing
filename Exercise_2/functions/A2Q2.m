@@ -4,7 +4,7 @@ function A2Q2(y_cl,y_fl)
 l_cl = laplacian_filter(y_cl);
 l_fl = laplacian_filter(y_fl);
 
-%Image add
+%Substruct laplacian from original to sharpen
 n_cl = y_cl - l_cl;
 n_fl = y_fl - l_fl;
 
