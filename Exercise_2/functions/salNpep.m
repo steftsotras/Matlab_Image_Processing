@@ -4,8 +4,8 @@ function s_Im = salNpep(I)
 s_Im  = I;
 
 %Defining threshold for black and white pixels
-black = ;
-white = 255*10/100;
+black = 5;
+white = 250;
 
 %get the size of the image
 [r,c] = size(I);
