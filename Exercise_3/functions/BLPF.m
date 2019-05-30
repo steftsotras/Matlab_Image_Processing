@@ -12,7 +12,7 @@ for u=1:P
         d = sqrt((u - P/2).^2 + (v - Q/2).^2);
         
         %butterworth lp filter
-        butlp(u,v)= 1./(1 + (d./ d0).^(2*n));
+        butlp(u,v)= 1/(1 + (d/d0).^(2*n));
 
     end
 end
