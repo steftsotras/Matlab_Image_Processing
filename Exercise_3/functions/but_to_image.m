@@ -1,4 +1,4 @@
-function but_to_image(y,d0)
+function fi1 = but_to_image(y,d0)
 
 %butterworth lowpass filter with inputs
 % BLPF(Image , D0 (Cutoff Frequency) , n (Order))
@@ -7,11 +7,11 @@ function but_to_image(y,d0)
 n = 1;
 blpf1 = BLPF(y,d0,n);
 
-%order of 5
+%order of 2
 n = 2;
 blpf2 = BLPF(y,d0,n);
 
-%order of 20
+%order of 4
 n = 4;
 blpf3 = BLPF(y,d0,n);
 
@@ -25,8 +25,8 @@ fi3 = fdf(y, blpf3);
 figure;
 %as images
 subplot(3,3,1),imshow(blpf1,[]),title('Order of 1');
-subplot(3,3,2),imshow(blpf2,[]),title('Order of 5');
-subplot(3,3,3),imshow(blpf3,[]),title('Order of 20');
+subplot(3,3,2),imshow(blpf2,[]),title('Order of 2');
+subplot(3,3,3),imshow(blpf3,[]),title('Order of 4');
 
 if d0<40
     i=250;

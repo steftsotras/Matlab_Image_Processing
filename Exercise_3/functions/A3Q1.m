@@ -7,7 +7,6 @@ fft2d(a);
 fft2d(im);
 
 %B
-
 %rotate images
 rota = imrotate(a, 45);
 rotim = imrotate(im, 45);
